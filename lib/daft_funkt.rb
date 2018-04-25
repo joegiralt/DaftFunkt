@@ -4,4 +4,8 @@ module DaftFunkt
     string.upcase
   }
 
+  Reverse = ->(collection) { 
+    collection.reverse
+  }
+
 end
