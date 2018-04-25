@@ -1,11 +1,18 @@
 module DaftFunkt
 
-  UpCase = ->(string) {
-    string.upcase
+  Map = ->(fn) {
+    ->(array) {
+      array.map{ |item| fn.(item) }
+    }
   }
 
   Reverse = ->(collection) { 
     collection.reverse
   }
 
+  UpCase = ->(string) {
+    string.upcase
+  }
+
 end
+
