@@ -1,24 +1,17 @@
+require 'daft_funkt/filter'
+require 'daft_funkt/flow'
+require 'daft_funkt/is_even'
+require 'daft_funkt/map'
+require 'daft_funkt/reverse'
+require 'daft_funkt/upcase'
+
 module DaftFunkt
-
-  Flow = Proc.new do |*funcs|
-    ->(data) {
-      funcs.inject(data){ |result, fn| fn.(result)}
-    }
-  end
-
-  Map = ->(fn) {
-    ->(array) {
-      array.map{ |item| fn.(item) }
-    }
-  }
-
-  Reverse = ->(collection) { 
-    collection.reverse
-  }
-
-  UpCase = ->(string) {
-    string.upcase
-  }
-
+  Functions = {
+    filter_fn:   Filter.fn,
+    flow_fn:     Flow.fn,
+    is_even_fn:  IsEven.fn,
+    map_fn:      Map.fn,
+    reverse_fn:  Reverse.fn,
+    upcase_fn:   Upcase.fn
+  }.freeze
 end
-
