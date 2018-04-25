@@ -14,4 +14,15 @@ module DaftFunkt
     reverse_fn:  Reverse.fn,
     upcase_fn:   Upcase.fn
   }.freeze
+
+  def daft_funkts(*args)
+    # We simply iterate through each passed in argument...
+    args.each do |arg|
+      # Makes sure that the arg is a valid daftFunkt
+      next if Functions[arg].nil?
+      class_eval do
+        "def #{arg}; DaftFunkt::Functions[:#{arg}] ;end"
+      end
+    end
+  end
 end
