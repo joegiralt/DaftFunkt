@@ -1,7 +1,10 @@
 # DaftFunkt
  A lodash/fp inspired Library for Ruby
 
-example
+This is a Work In Progress.
+
+
+Example
 
 ```ruby 
 class Foo
