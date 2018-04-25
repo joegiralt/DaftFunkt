@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary     = "A lodash/fp inspired library for ruby"
   s.authors     = ["Joseph Giralt"]
   s.email       = 'joe.m.giralt@gmail.com'
-  s.files       = []
+  s.files       = Dir['lib/*.rb']
   s.homepage    = 'https://github.com/joegiralt/DaftFunkt'
   s.license     = 'MIT'
   s.add_development_dependency 'rspec', '~> 3.7.0'
