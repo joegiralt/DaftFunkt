@@ -11,18 +11,7 @@ class SomeEtlTool
 
   daft_funkts :flow_fn, :map_fn, :upcase_fn, :reverse_fn
 
-  def capitalize_all!
-    map_fn.(upcase_fn)
-  end
-
-  def reverse_names!
-    map_fn.(reverse_fn)
-  end
   
-  def reverse_collection!
-    reverse_fn
-  end
-
   def proccess_names(list_of_names)
     flow_fn.(
       capitalize_all!,
@@ -30,6 +19,21 @@ class SomeEtlTool
       reverse_collection!
     ).(list_of_names)
   end
+  
+  private
+
+  def capitalize_all
+    map_fn.(upcase_fn)
+  end
+
+  def reverse_names
+    map_fn.(reverse_fn)
+  end
+  
+  def reverse_collection
+    reverse_fn
+  end
+
 end
 ```
 or if you prefer
