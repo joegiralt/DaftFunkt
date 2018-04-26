@@ -14,9 +14,9 @@ class SomeEtlTool
   
   def proccess_names(list_of_names)
     flow_fn.(
-      capitalize_all!,
-      reverse_names!,
-      reverse_collection!
+      capitalize_all,
+      reverse_names,
+      reverse_collection
     ).(list_of_names)
   end
   

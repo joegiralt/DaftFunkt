@@ -39,3 +39,16 @@ RSpec.describe DaftFunkt::Includes do
     end
   end
 end
+
+def map_to_up
+  map_fn.(upcase_fn)
+end
+
+def mutate(arr)
+  flow_fn.(
+    map_to_up,
+    
+  ).(arr)
+  
+end
+
